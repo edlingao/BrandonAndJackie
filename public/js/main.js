@@ -157,3 +157,57 @@ RSVPForm.addEventListener('submit', async (event) => {
     RSVPForm.reset();
   }
 });
+
+const clocks = document.querySelectorAll('.clock');
+
+const targetDate = new Date('2025-04-26T00:00:00');
+
+const calculateTimeLeft = () => {
+  const now = new Date();
+  const difference = targetDate - now;
+
+  if (difference > 0) {
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    drawTimer({ days, hours, minutes, seconds });
+  }
+};
+
+const drawTimer = ({ days, hours, minutes, seconds }) => {
+  clocks.forEach((clock) => {
+    const daysSpan = clock.querySelector('.days');
+    const hoursSpan = clock.querySelector('.hours');
+    const minutesSpan = clock.querySelector('.minutes');
+    const secondsSpan = clock.querySelector('.seconds');
+
+    daysSpan.innerText = days;
+    hoursSpan.innerText = hours;
+    minutesSpan.innerText = minutes;
+    secondsSpan.innerText = seconds;
+  });
+}
+
+// Calculate immediately
+calculateTimeLeft();
+
+// Update every second
+const timer = setInterval(calculateTimeLeft, 1000);
+
+// Music
+const musicBtn = document.getElementById('musicBtn');
+const bgMusic = document.getElementById('bgMusic');
+let isPlaying = false;
+
+musicBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    bgMusic.pause();
+    musicBtn.classList.remove('playing');
+  } else {
+    bgMusic.play();
+    musicBtn.classList.add('playing');
+  }
+  isPlaying = !isPlaying;
+});
+

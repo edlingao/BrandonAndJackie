@@ -27,6 +27,19 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- Music Player Start -->
+    <button class="music-btn" id="musicBtn" aria-label="Toggle Music">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+    </button>
+
+    <audio id="bgMusic" loop>
+      <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Music Player End -->
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="#" class="navbar-brand d-block d-lg-none">
@@ -47,7 +60,7 @@
             <div class="navbar-nav mr-auto py-0">
                 <a href="#parents" class="nav-item nav-link">Familia</a>
                 <a href="#event" class="nav-item nav-link">Evento</a>
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
+                <a href="#rsvp" class="nav-item nav-link">Confirmación</a>
             </div>
         </div>
     </nav>
@@ -66,6 +79,27 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
+                            <h3 class="font-secondary text-white mt-4 text-4xl">26.04.2025</h3>
+                        </div>
+                        <div
+                          class="clock grid grid-cols-4 gap-4 text-center uppercase"
+                          >
+                          <div class="flex flex-col">
+                            <span class="days text-4xl"></span>
+                            <div class="smalltext">Days</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="hours text-4xl"></span>
+                            <div class="smalltext">Hours</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="minutes text-4xl"></span>
+                            <div class="smalltext">Minutes</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="seconds text-4xl"></span>
+                            <div class="smalltext">Seconds</div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -77,6 +111,27 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
+                            <h3 class="font-secondary text-white mt-4 text-4xl">26.04.2025</h3>
+                        </div>
+                        <div
+                          class="clock grid grid-cols-4 gap-4 text-center uppercase"
+                          >
+                          <div class="flex flex-col">
+                            <span class="days text-4xl"></span>
+                            <div class="smalltext">Days</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="hours text-4xl"></span>
+                            <div class="smalltext">Hours</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="minutes text-4xl"></span>
+                            <div class="smalltext">Minutes</div>
+                          </div>
+                          <div class="flex flex-col">
+                            <span class="seconds text-4xl"></span>
+                            <div class="smalltext">Seconds</div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -202,10 +257,14 @@
                 <h1 class="font-secondary display-4">BBVA</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
+            <h6 class="text-2xl text-center mb-4" style="max-width: 40rem; margin-right: auto; margin-left: auto;">Su presencia es nuestro mayor regalo. Si desean contribuir a nuestra luna de miel, su gesto nos llenará de alegría.</h6>
+
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                   <h6>Cuenta CLABE</h6>
                   <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">012 180 01502121628 4</h6>
+                  <h6>Nombre: Brandon Torres Pedraza</h6>
+                  <h6>Banco: BBVA</h6>
                 </div>
             </div>
         </div>
@@ -284,7 +343,7 @@
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Confirmación</h6>
                 <h1 class="font-secondary display-4">Unetenos</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
